@@ -35,7 +35,10 @@
     "lib"
   ],
   "main": "sundial.js",
-  "repository": "https://github.com/tidepool-org/sundial.git",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mdblp/sundial.git"
+  },
   "scripts": {
     "test": "grunt test",
     "browser-tests": "node_modules/.bin/testem"
