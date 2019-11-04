@@ -1,7 +1,7 @@
 Sundial datetime wrapper
 ========================
 
-[![Build Status](https://travis-ci.org/tidepool-org/sundial.png)](https://travis-ci.org/tidepool-org/sundial)
+[![Build Status](https://travis-ci.com/tidepool-org/sundial.svg?branch=master)](https://travis-ci.com/tidepool-org/sundial)
 
 The tidepool platform stores timestamps as ISO8601 timestamp with a timezone.
 

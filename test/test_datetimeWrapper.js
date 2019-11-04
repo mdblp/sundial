@@ -410,7 +410,7 @@ describe('sundial', function() {
         expect(datetimeWrapper.formatFromOffset(utcDateString, -240)).to.equal('May 8 at 8:00 pm');
       });
     });
-    
+
     describe('formatForStorage', function() {
       var basicTimestamp = '2014-10-03T13:23';
       var offsetMins = -780;
@@ -427,7 +427,7 @@ describe('sundial', function() {
       it('returns a string',function(){
 
         var utcString = datetimeWrapper.formatForStorage(basicTimestamp,offsetMins);
-        expect(utcString).is.a.String;
+        expect(utcString).is.a('string');
       });
 
       it('returns a valid date',function(){
@@ -602,17 +602,17 @@ describe('sundial', function() {
         expect(Object.keys(tzs)).to.deep.equal(keys);
         expect(tzs.bigFour.length).to.equal(4);
         expect(tzs.unitedStates.length).to.equal(9);
-        expect(tzs.hoisted.length).to.equal(95);
-        expect(tzs.theRest.length).to.equal(441);
+        expect(tzs.hoisted.length).to.equal(98);
+        expect(tzs.theRest.length).to.equal(448);
       });
 
       it('returns timezone objects with a non-empty string name and label each',function(){
         var timezoneObjs = tzs.bigFour.concat(tzs.unitedStates)
           .concat(tzs.hoisted).concat(tzs.theRest);
-        timezoneObjs.forEach(function(timezone){
-          expect(timezone.label).to.exist;
-          expect(timezone.value).to.exist;
-          expect(timezone.offset).to.exist;
+        timezoneObjs.forEach((timezone) => {
+          expect(timezone.label).to.not.be.undefined;
+          expect(timezone.value).to.not.be.undefined;
+          expect(timezone.offset).to.not.be.undefined;
         });
       });
     });
@@ -719,10 +719,10 @@ describe('sundial', function() {
 
         var badJuneDate = '06/31/1951';
         expect(datetimeWrapper.isValidDateForMask(badJuneDate, MASK)).is.false;
-        
+
         var badSepDate = '09/31/1977';
         expect(datetimeWrapper.isValidDateForMask(badSepDate, MASK)).is.false;
-        
+
         var badNovDate = '11/31/1983';
         expect(datetimeWrapper.isValidDateForMask(badNovDate, MASK)).is.false;
       });
@@ -806,7 +806,7 @@ describe('sundial', function() {
       it('returns a string',function(){
 
         var utcString = datetimeWrapper.utcDateString();
-        expect(utcString).is.a.String;
+        expect(utcString).is.a('string');
       });
 
       it('returns a valid date',function(){
