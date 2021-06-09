@@ -1,0 +1,9 @@
+module: sundial
+type: nodejs
+runTests: false
+testCommand: npm test
+docker: false
+securityScan: false
+publishNpm: true
+publishS3: false
+dockerPushToProduction: false
