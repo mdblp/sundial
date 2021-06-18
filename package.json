@@ -41,6 +41,7 @@
   },
   "scripts": {
     "security-checks": "npm audit --production --registry=https://registry.npmjs.org/",
+    "build-ci": "npm install && npm run security-checks",
     "test": "grunt test",
     "browser-tests": "testem"
   },
