@@ -1,6 +1,10 @@
 # Yourloops data visualization for diabetes device data
 This node package is a dependency of Blip and was forked from tidepool/sundial.
 
+## 0.2.1 - 2021-06-21
+### Engineering
+- YLP-785 Bump some dependencies
+
 ## 0.2.0 - 2020-07-01
 ### Changed
 - Update moment-timezone to 0.5.31 (use same version as blip & viz)
